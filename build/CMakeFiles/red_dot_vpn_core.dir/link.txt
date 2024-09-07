@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/red_dot_vpn_core.dir/vpn_client/main.c.o CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.o -o red_dot_vpn_core 

@@ -1,0 +1,4 @@
+/home/twofacedjanus/Documents/HoleVPN/build/CMakeFiles/red_dot_vpn_core.dir
+/home/twofacedjanus/Documents/HoleVPN/build/CMakeFiles/red_dot_vpn_server.dir
+/home/twofacedjanus/Documents/HoleVPN/build/CMakeFiles/edit_cache.dir
+/home/twofacedjanus/Documents/HoleVPN/build/CMakeFiles/rebuild_cache.dir
