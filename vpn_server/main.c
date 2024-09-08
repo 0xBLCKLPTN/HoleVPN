@@ -13,7 +13,8 @@ int main() {
     int server_fd;
     struct sockaddr_in address;
     int addrlen = sizeof(address);
-    char buffer[BUFFER_SIZE] = {0};
+    unsigned char buffer[BUFFER_SIZE] = {0};
+    unsigned char decrypted_text[BUFFER_SIZE] = {0};
 
     // Creating socket file descriptor
     if ((server_fd = socket(AF_INET, SOCK_DGRAM, 0)) == 0) {
@@ -42,11 +43,11 @@ int main() {
         }
 
         // Decrypting the received data
-        encrypt(buffer, len, KEY);
-        printf("Decrypted message from client: %s\n", buffer);
+        simple_aes_decode(&buffer, &decrypted_text);
+        printf("Decrypted message from client: %s\n", decrypted_text);
 
         // Encrypting the response
-        encrypt(buffer, len, KEY);
+        //encrypt(, len, KEY);
 
         // Sending the response back to the client
         sendto(server_fd, buffer, len, 0, (struct sockaddr *)&address, addrlen);

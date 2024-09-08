@@ -22,7 +22,8 @@ int main(int argc, char* argv[]) {
     int sock = 0;
     struct sockaddr_in serv_addr;
     char buffer[BUFFER_SIZE] = {0};
-    char message[BUFFER_SIZE] = {0};
+    unsigned char message[BUFFER_SIZE] = {0};
+    unsigned char ciphertext[BUFFER_SIZE] = {0};
 
     // Creating socket file descriptor
     if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) < 0) {
@@ -59,7 +60,8 @@ int main(int argc, char* argv[]) {
         }
 
         // Encrypting the message
-        encrypt(message, strlen(message), KEY);
+        simple_aes_encode(&message, &ciphertext);
+        simple_aes_encoded_print(&ciphertext, strlen((char*)ciphertext));
 
         // Sending the message to the server
         if (sendto(sock, message, strlen(message), 0, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
