@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.o.d"
   "CMakeFiles/red_dot_vpn_server.dir/vpn_server/main.c.o"
   "CMakeFiles/red_dot_vpn_server.dir/vpn_server/main.c.o.d"
-  "red_dot_vpn_server"
-  "red_dot_vpn_server.pdb"
+  "bin/linux/red_dot_vpn_server"
+  "bin/linux/red_dot_vpn_server.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

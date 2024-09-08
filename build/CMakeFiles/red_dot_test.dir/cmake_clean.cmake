@@ -3,8 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.o.d"
   "CMakeFiles/red_dot_test.dir/vpn_test/main.c.o"
   "CMakeFiles/red_dot_test.dir/vpn_test/main.c.o.d"
-  "red_dot_test"
-  "red_dot_test.pdb"
+  "bin/linux/red_dot_test"
+  "bin/linux/red_dot_test.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

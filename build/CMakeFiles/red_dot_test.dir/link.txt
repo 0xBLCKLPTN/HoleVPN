@@ -1,1 +1,1 @@
-/usr/bin/cc -rdynamic CMakeFiles/red_dot_test.dir/vpn_test/main.c.o CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.o -o red_dot_test  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
+/usr/bin/cc -rdynamic CMakeFiles/red_dot_test.dir/vpn_test/main.c.o CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.o -o bin/linux/red_dot_test  /usr/lib/x86_64-linux-gnu/libssl.so /usr/lib/x86_64-linux-gnu/libcrypto.so 
