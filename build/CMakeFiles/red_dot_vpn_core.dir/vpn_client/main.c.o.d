@@ -76,4 +76,8 @@ CMakeFiles/red_dot_vpn_core.dir/vpn_client/main.c.o: \
  /usr/include/asm-generic/sockios.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h \
- /home/twofacedjanus/Documents/HoleVPN/vpn_client/../cryptography/cryptography.h
+ /home/twofacedjanus/Documents/HoleVPN/vpn_client/../cryptography/cryptography.h \
+ /usr/include/openssl/aes.h /usr/include/openssl/macros.h \
+ /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
+ /usr/include/x86_64-linux-gnu/openssl/configuration.h \
+ /usr/include/openssl/opensslv.h

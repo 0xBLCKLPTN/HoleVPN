@@ -142,6 +142,19 @@ red_dot_vpn_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/build
 .PHONY : red_dot_vpn_server/fast
 
+#=============================================================================
+# Target rules for targets named red_dot_test
+
+# Build rule for target.
+red_dot_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 red_dot_test
+.PHONY : red_dot_test
+
+# fast build rule for target.
+red_dot_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/build
+.PHONY : red_dot_test/fast
+
 cryptography/cryptography.o: cryptography/cryptography.c.o
 .PHONY : cryptography/cryptography.o
 
@@ -149,6 +162,7 @@ cryptography/cryptography.o: cryptography/cryptography.c.o
 cryptography/cryptography.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.o
 .PHONY : cryptography/cryptography.c.o
 
 cryptography/cryptography.i: cryptography/cryptography.c.i
@@ -158,6 +172,7 @@ cryptography/cryptography.i: cryptography/cryptography.c.i
 cryptography/cryptography.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.i
 .PHONY : cryptography/cryptography.c.i
 
 cryptography/cryptography.s: cryptography/cryptography.c.s
@@ -167,6 +182,7 @@ cryptography/cryptography.s: cryptography/cryptography.c.s
 cryptography/cryptography.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.s
 .PHONY : cryptography/cryptography.c.s
 
 vpn_client/main.o: vpn_client/main.c.o
@@ -217,6 +233,30 @@ vpn_server/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/vpn_server/main.c.s
 .PHONY : vpn_server/main.c.s
 
+vpn_test/main.o: vpn_test/main.c.o
+.PHONY : vpn_test/main.o
+
+# target to build an object file
+vpn_test/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/vpn_test/main.c.o
+.PHONY : vpn_test/main.c.o
+
+vpn_test/main.i: vpn_test/main.c.i
+.PHONY : vpn_test/main.i
+
+# target to preprocess a source file
+vpn_test/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/vpn_test/main.c.i
+.PHONY : vpn_test/main.c.i
+
+vpn_test/main.s: vpn_test/main.c.s
+.PHONY : vpn_test/main.s
+
+# target to generate assembly for a file
+vpn_test/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/vpn_test/main.c.s
+.PHONY : vpn_test/main.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -225,6 +265,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... red_dot_test"
 	@echo "... red_dot_vpn_core"
 	@echo "... red_dot_vpn_server"
 	@echo "... cryptography/cryptography.o"
@@ -236,6 +277,9 @@ help:
 	@echo "... vpn_server/main.o"
 	@echo "... vpn_server/main.i"
 	@echo "... vpn_server/main.s"
+	@echo "... vpn_test/main.o"
+	@echo "... vpn_test/main.i"
+	@echo "... vpn_test/main.s"
 .PHONY : help
 
 

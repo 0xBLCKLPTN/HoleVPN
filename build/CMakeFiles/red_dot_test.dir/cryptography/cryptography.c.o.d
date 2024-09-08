@@ -1,4 +1,4 @@
-CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.o: \
+CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.o: \
  /home/twofacedjanus/Documents/HoleVPN/cryptography/cryptography.c \
  /usr/include/stdc-predef.h \
  /home/twofacedjanus/Documents/HoleVPN/cryptography/./cryptography.h \

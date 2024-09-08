@@ -108,6 +108,8 @@ red_dot_vpn_server_EXTERNAL_OBJECTS =
 red_dot_vpn_server: CMakeFiles/red_dot_vpn_server.dir/vpn_server/main.c.o
 red_dot_vpn_server: CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.o
 red_dot_vpn_server: CMakeFiles/red_dot_vpn_server.dir/build.make
+red_dot_vpn_server: /usr/lib/x86_64-linux-gnu/libssl.so
+red_dot_vpn_server: /usr/lib/x86_64-linux-gnu/libcrypto.so
 red_dot_vpn_server: CMakeFiles/red_dot_vpn_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/twofacedjanus/Documents/HoleVPN/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable red_dot_vpn_server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/red_dot_vpn_server.dir/link.txt --verbose=$(VERBOSE)
