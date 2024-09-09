@@ -10,33 +10,28 @@ use env_logger::Env;
 #[derive(Deserialize)]
 struct KeyValue
 {
-    key: String,
-    value: String,
+    country: String,
+    ip: String,
 }
 
 #[get("/health")]
 async fn health() -> impl Responder
 {
-    println!("HellO!");
     HttpResponse::Ok().body("Hello World!")
 }
 
 #[post("/add-server")]
 async fn add_server(data: web::Json<KeyValue>, redis_client: web::Data<redis::Client>) -> actix_web::Result<impl Responder>
 {
-    println!("Im above conn");
     let mut conn = redis_client.get_connection_manager().await.map_err(error::ErrorInternalServerError)?;
-    println!("Im after conn");
     let res = redis::Cmd::mset(&[
-        ("my_domain:one", data.value.clone()),
+        (&data.country, data.ip.clone()),
     ])
     //println!("{:?}", res);
     .query_async::<String>(&mut conn).await.map_err(error::ErrorInternalServerError)?;
-    println!("HELLO!!!!{:?}", res);
     if res == "OK" {
         Ok(HttpResponse::Ok().body("successfully cached values"))
     } else {
-        println!("Error there!");
         Ok(HttpResponse::InternalServerError().finish())
     }
 }
@@ -53,15 +48,16 @@ async fn ping_server() -> impl Responder
     HttpResponse::Ok().body("Server OK.")
 }
 
-/*
+
 #[get("/get-servers")]
-async fn get_servers(key: web::Path<String>, redis_client: web::Data<RedisClient>) -> impl Responder
+async fn get_servers(redis_client: web::Data<RedisClient>) -> impl Responder
 {
     let mut conn = redis_client.get().await.unwrap();
-    let value: String = conn.get(&key).await.unwrap_or_else(|_| "Key not found".to_string());
-    format!("Value for key {}: {}", key, value)
+    let value: String = conn.keys().await.unwrap_or_else(|_| "Key not found".to_string());
+    println!("KEYS {:?}", value);
+    format!("Value for key!")
 }
-*/
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     env_logger::init_from_env(Env::default().default_filter_or("info"));
