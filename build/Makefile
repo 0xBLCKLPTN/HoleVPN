@@ -117,52 +117,65 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named red_dot_vpn_core
+# Target rules for targets named RedDotClient
 
 # Build rule for target.
-red_dot_vpn_core: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 red_dot_vpn_core
-.PHONY : red_dot_vpn_core
+RedDotClient: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RedDotClient
+.PHONY : RedDotClient
 
 # fast build rule for target.
-red_dot_vpn_core/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/build
-.PHONY : red_dot_vpn_core/fast
+RedDotClient/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotClient.dir/build.make CMakeFiles/RedDotClient.dir/build
+.PHONY : RedDotClient/fast
 
 #=============================================================================
-# Target rules for targets named red_dot_vpn_server
+# Target rules for targets named RedDotServer
 
 # Build rule for target.
-red_dot_vpn_server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 red_dot_vpn_server
-.PHONY : red_dot_vpn_server
+RedDotServer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RedDotServer
+.PHONY : RedDotServer
 
 # fast build rule for target.
-red_dot_vpn_server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/build
-.PHONY : red_dot_vpn_server/fast
+RedDotServer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotServer.dir/build.make CMakeFiles/RedDotServer.dir/build
+.PHONY : RedDotServer/fast
 
 #=============================================================================
-# Target rules for targets named red_dot_test
+# Target rules for targets named RedDotTest
 
 # Build rule for target.
-red_dot_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 red_dot_test
-.PHONY : red_dot_test
+RedDotTest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RedDotTest
+.PHONY : RedDotTest
 
 # fast build rule for target.
-red_dot_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/build
-.PHONY : red_dot_test/fast
+RedDotTest/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotTest.dir/build.make CMakeFiles/RedDotTest.dir/build
+.PHONY : RedDotTest/fast
+
+#=============================================================================
+# Target rules for targets named run_script
+
+# Build rule for target.
+run_script: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_script
+.PHONY : run_script
+
+# fast build rule for target.
+run_script/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_script.dir/build.make CMakeFiles/run_script.dir/build
+.PHONY : run_script/fast
 
 cryptography/cryptography.o: cryptography/cryptography.c.o
 .PHONY : cryptography/cryptography.o
 
 # target to build an object file
 cryptography/cryptography.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotClient.dir/build.make CMakeFiles/RedDotClient.dir/cryptography/cryptography.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotServer.dir/build.make CMakeFiles/RedDotServer.dir/cryptography/cryptography.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotTest.dir/build.make CMakeFiles/RedDotTest.dir/cryptography/cryptography.c.o
 .PHONY : cryptography/cryptography.c.o
 
 cryptography/cryptography.i: cryptography/cryptography.c.i
@@ -170,9 +183,9 @@ cryptography/cryptography.i: cryptography/cryptography.c.i
 
 # target to preprocess a source file
 cryptography/cryptography.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotClient.dir/build.make CMakeFiles/RedDotClient.dir/cryptography/cryptography.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotServer.dir/build.make CMakeFiles/RedDotServer.dir/cryptography/cryptography.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotTest.dir/build.make CMakeFiles/RedDotTest.dir/cryptography/cryptography.c.i
 .PHONY : cryptography/cryptography.c.i
 
 cryptography/cryptography.s: cryptography/cryptography.c.s
@@ -180,9 +193,9 @@ cryptography/cryptography.s: cryptography/cryptography.c.s
 
 # target to generate assembly for a file
 cryptography/cryptography.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/cryptography/cryptography.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/cryptography/cryptography.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/cryptography/cryptography.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotClient.dir/build.make CMakeFiles/RedDotClient.dir/cryptography/cryptography.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotServer.dir/build.make CMakeFiles/RedDotServer.dir/cryptography/cryptography.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotTest.dir/build.make CMakeFiles/RedDotTest.dir/cryptography/cryptography.c.s
 .PHONY : cryptography/cryptography.c.s
 
 vpn_client/main.o: vpn_client/main.c.o
@@ -190,7 +203,7 @@ vpn_client/main.o: vpn_client/main.c.o
 
 # target to build an object file
 vpn_client/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/vpn_client/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotClient.dir/build.make CMakeFiles/RedDotClient.dir/vpn_client/main.c.o
 .PHONY : vpn_client/main.c.o
 
 vpn_client/main.i: vpn_client/main.c.i
@@ -198,7 +211,7 @@ vpn_client/main.i: vpn_client/main.c.i
 
 # target to preprocess a source file
 vpn_client/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/vpn_client/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotClient.dir/build.make CMakeFiles/RedDotClient.dir/vpn_client/main.c.i
 .PHONY : vpn_client/main.c.i
 
 vpn_client/main.s: vpn_client/main.c.s
@@ -206,7 +219,7 @@ vpn_client/main.s: vpn_client/main.c.s
 
 # target to generate assembly for a file
 vpn_client/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_core.dir/build.make CMakeFiles/red_dot_vpn_core.dir/vpn_client/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotClient.dir/build.make CMakeFiles/RedDotClient.dir/vpn_client/main.c.s
 .PHONY : vpn_client/main.c.s
 
 vpn_server/main.o: vpn_server/main.c.o
@@ -214,7 +227,7 @@ vpn_server/main.o: vpn_server/main.c.o
 
 # target to build an object file
 vpn_server/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/vpn_server/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotServer.dir/build.make CMakeFiles/RedDotServer.dir/vpn_server/main.c.o
 .PHONY : vpn_server/main.c.o
 
 vpn_server/main.i: vpn_server/main.c.i
@@ -222,7 +235,7 @@ vpn_server/main.i: vpn_server/main.c.i
 
 # target to preprocess a source file
 vpn_server/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/vpn_server/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotServer.dir/build.make CMakeFiles/RedDotServer.dir/vpn_server/main.c.i
 .PHONY : vpn_server/main.c.i
 
 vpn_server/main.s: vpn_server/main.c.s
@@ -230,7 +243,7 @@ vpn_server/main.s: vpn_server/main.c.s
 
 # target to generate assembly for a file
 vpn_server/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_vpn_server.dir/build.make CMakeFiles/red_dot_vpn_server.dir/vpn_server/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotServer.dir/build.make CMakeFiles/RedDotServer.dir/vpn_server/main.c.s
 .PHONY : vpn_server/main.c.s
 
 vpn_test/main.o: vpn_test/main.c.o
@@ -238,7 +251,7 @@ vpn_test/main.o: vpn_test/main.c.o
 
 # target to build an object file
 vpn_test/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/vpn_test/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotTest.dir/build.make CMakeFiles/RedDotTest.dir/vpn_test/main.c.o
 .PHONY : vpn_test/main.c.o
 
 vpn_test/main.i: vpn_test/main.c.i
@@ -246,7 +259,7 @@ vpn_test/main.i: vpn_test/main.c.i
 
 # target to preprocess a source file
 vpn_test/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/vpn_test/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotTest.dir/build.make CMakeFiles/RedDotTest.dir/vpn_test/main.c.i
 .PHONY : vpn_test/main.c.i
 
 vpn_test/main.s: vpn_test/main.c.s
@@ -254,7 +267,7 @@ vpn_test/main.s: vpn_test/main.c.s
 
 # target to generate assembly for a file
 vpn_test/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/red_dot_test.dir/build.make CMakeFiles/red_dot_test.dir/vpn_test/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RedDotTest.dir/build.make CMakeFiles/RedDotTest.dir/vpn_test/main.c.s
 .PHONY : vpn_test/main.c.s
 
 # Help Target
@@ -265,9 +278,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... red_dot_test"
-	@echo "... red_dot_vpn_core"
-	@echo "... red_dot_vpn_server"
+	@echo "... run_script"
+	@echo "... RedDotClient"
+	@echo "... RedDotServer"
+	@echo "... RedDotTest"
 	@echo "... cryptography/cryptography.o"
 	@echo "... cryptography/cryptography.i"
 	@echo "... cryptography/cryptography.s"

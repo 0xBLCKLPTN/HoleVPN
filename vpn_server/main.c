@@ -41,13 +41,8 @@ int main() {
             perror("recvfrom");
             exit(EXIT_FAILURE);
         }
-
-        // Decrypting the received data
         simple_aes_decode(&buffer, &decrypted_text);
         printf("Decrypted message from client: %s\n", decrypted_text);
-
-        // Encrypting the response
-        //encrypt(, len, KEY);
 
         // Sending the response back to the client
         sendto(server_fd, buffer, len, 0, (struct sockaddr *)&address, addrlen);

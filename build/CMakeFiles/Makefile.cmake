@@ -74,6 +74,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/XL-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/XLClang-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
+  "/usr/share/cmake-3.22/Modules/FetchContent.cmake"
   "/usr/share/cmake-3.22/Modules/FindOpenSSL.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
@@ -101,7 +102,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/red_dot_vpn_core.dir/DependInfo.cmake"
-  "CMakeFiles/red_dot_vpn_server.dir/DependInfo.cmake"
-  "CMakeFiles/red_dot_test.dir/DependInfo.cmake"
+  "CMakeFiles/RedDotClient.dir/DependInfo.cmake"
+  "CMakeFiles/RedDotServer.dir/DependInfo.cmake"
+  "CMakeFiles/RedDotTest.dir/DependInfo.cmake"
+  "CMakeFiles/run_script.dir/DependInfo.cmake"
   )

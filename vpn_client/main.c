@@ -64,7 +64,7 @@ int main(int argc, char* argv[]) {
         simple_aes_encoded_print(&ciphertext, strlen((char*)ciphertext));
 
         // Sending the message to the server
-        if (sendto(sock, message, strlen(message), 0, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
+        if (sendto(sock, ciphertext, strlen(ciphertext), 0, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) {
             perror("sendto");
             close(sock);
             return -1;
